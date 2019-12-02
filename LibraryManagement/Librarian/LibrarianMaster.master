@@ -22,8 +22,5 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <p>
-            <br />
-        </p>
     </asp:ContentPlaceHolder>
 </asp:Content>
