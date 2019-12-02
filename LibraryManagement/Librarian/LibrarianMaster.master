@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="LibrarianMaster.master.cs" Inherits="LibraryManagement.Librarian.LibrarianMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderAside" runat="server">
+    &nbsp;<asp:Button ID="btnHome" runat="server" OnClick="btnHome_Click" Text="Home" Width="126px" />
+            <br />
+            <br />
+&nbsp;<asp:Button ID="btnIssueBook" runat="server" OnClick="btnIssueBook_Click" Text="Issue Book" Width="126px" />
+            <br />
+            <br />
+&nbsp;<asp:Button ID="btnBookReturn" runat="server" OnClick="btnBookReturn_Click" Text="Book Return" Width="126px" />
+            <br />
+            <br />
+&nbsp;<asp:Button ID="btnSearchLibrary" runat="server" OnClick="btnSearchLibrary_Click" Text="Search Library" />
+            <br />
+            <br />
+&nbsp;<asp:Button ID="btnProfiles" runat="server" OnClick="btnProfiles_Click" Text="Profiles" Width="126px" />
+            <br />
+&nbsp;<br />
+&nbsp;<asp:Button ID="btnReports" runat="server" OnClick="btnReports_Click" Text="Reports" Width="126px" />
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+</asp:Content>

@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="LibraryManagement.Main" %>
+
+<%@ Register Src="UserControls/header.ascx" TagName="header" TagPrefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="styles/main.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Wrapper">
+            <header>
+                Search For Books<br />
+                <asp:Button ID="btnHome" runat="server" Text="Home" Style="margin-right: 199px" CssClass="btnhome" />
+                <asp:DropDownList ID="ddlSearchBy" runat="server" Style="margin-left: 0px">
+                    <asp:ListItem>Title </asp:ListItem>
+                    <asp:ListItem>Author</asp:ListItem>
+                    <asp:ListItem>Publisher</asp:ListItem>
+                    <asp:ListItem>Genre</asp:ListItem>
+                </asp:DropDownList>
+                <asp:TextBox ID="txtSearchBar" runat="server" Width="148px"></asp:TextBox>
+                <asp:ImageButton ID="btnSearch" runat="server" BorderColor="#003300"
+                    BorderStyle="Solid" BorderWidth="1px"
+                    ImageUrl="~/Resources/search.png" Width="25px" />
+                &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnLogout" runat="server" Style="margin-left: 194px" Text="Logout" />
+            </header>
+            <aside>
+                <h3>Navigation</h3>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderAside" runat="server">
+                </asp:ContentPlaceHolder>
+            </aside>
+            <section id="ContentArea">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                    <p>
+                        &nbsp;
+                    </p>
+                </asp:ContentPlaceHolder>
+            </section>
+        </div>
+    </form>
+</body>
+</html>
+
