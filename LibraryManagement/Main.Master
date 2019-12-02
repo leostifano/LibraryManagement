@@ -34,25 +34,6 @@
             </aside>
             <section id="ContentArea">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
-                    <p>
-                        &nbsp;
-                    </p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
-                    <p>
-                        &nbsp;</p>
                 </asp:ContentPlaceHolder>
             </section>
         </div>
