@@ -1,7 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="LibraryManagement.Main" %>
-
-<%@ Register Src="UserControls/header.ascx" TagName="header" TagPrefix="uc1" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +13,7 @@
         <div id="Wrapper">
             <header>
                 Search For Books<br />
-                <asp:Button ID="btnHome" runat="server" Text="Home" Style="margin-right: 199px" CssClass="btnhome" />
+                <asp:Button ID="btnHome" runat="server" Text="Home" Style="margin-right: 199px" CssClass="btnhome" OnClick="btnHome_Click" />
                 <asp:DropDownList ID="ddlSearchBy" runat="server" Style="margin-left: 0px">
                     <asp:ListItem>Title </asp:ListItem>
                     <asp:ListItem>Author</asp:ListItem>
@@ -40,6 +37,22 @@
                     <p>
                         &nbsp;
                     </p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        &nbsp;</p>
                 </asp:ContentPlaceHolder>
             </section>
         </div>

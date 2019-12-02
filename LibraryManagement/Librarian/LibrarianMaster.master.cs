@@ -13,5 +13,35 @@ namespace LibraryManagement.Librarian
         {
 
         }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnIssueBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnBookReturn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSearchLibrary_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnProfiles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnReports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

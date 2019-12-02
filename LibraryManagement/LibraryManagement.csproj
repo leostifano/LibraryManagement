@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Librarian\WebForm1.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Resources\search.png" />
     <Content Include="styles\main.css" />
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="Librarian\LibrarianMaster.master.designer.cs">
       <DependentUpon>LibrarianMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
