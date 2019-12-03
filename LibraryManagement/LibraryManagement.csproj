@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LibraryDb.mdf" />
+    <Content Include="App_Data\LibraryDb_log.ldf">
+      <DependentUpon>LibraryDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Librarian\WebForm1.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Resources\search.png" />
