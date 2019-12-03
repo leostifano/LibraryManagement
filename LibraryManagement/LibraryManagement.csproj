@@ -67,7 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Librarian\WebForm1.aspx" />
+    <Content Include="Librarian\BookReturn.aspx" />
+    <Content Include="Librarian\Default.aspx" />
+    <Content Include="Librarian\IssueBook.aspx" />
+    <Content Include="Librarian\Profiles.aspx" />
+    <Content Include="Librarian\Reports.aspx" />
+    <Content Include="Librarian\SearchLibrary.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Resources\search.png" />
     <Content Include="styles\main.css" />
@@ -76,6 +81,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="Librarian\BookReturn.aspx.cs">
+      <DependentUpon>BookReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\BookReturn.aspx.designer.cs">
+      <DependentUpon>BookReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\IssueBook.aspx.cs">
+      <DependentUpon>IssueBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\IssueBook.aspx.designer.cs">
+      <DependentUpon>IssueBook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Librarian\LibrarianMaster.master.cs">
       <DependentUpon>LibrarianMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -83,12 +109,26 @@
     <Compile Include="Librarian\LibrarianMaster.master.designer.cs">
       <DependentUpon>LibrarianMaster.master</DependentUpon>
     </Compile>
-    <Compile Include="Librarian\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Librarian\Profiles.aspx.cs">
+      <DependentUpon>Profiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Librarian\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Librarian\Profiles.aspx.designer.cs">
+      <DependentUpon>Profiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\SearchLibrary.aspx.cs">
+      <DependentUpon>SearchLibrary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\SearchLibrary.aspx.designer.cs">
+      <DependentUpon>SearchLibrary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -122,6 +162,7 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
+    <Content Include="Librarian\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

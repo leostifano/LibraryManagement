@@ -16,32 +16,32 @@ namespace LibraryManagement.Librarian
 
         protected void btnHome_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/Default.aspx");
         }
 
         protected void btnIssueBook_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/IssueBook.aspx");
         }
 
         protected void btnBookReturn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/BookReturn.aspx");
         }
 
         protected void btnSearchLibrary_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/SearchLibrary.aspx");
         }
 
         protected void btnProfiles_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/Profiles.aspx");
         }
 
         protected void btnReports_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Librarian/Reports.aspx");
         }
     }
 }
