@@ -11,7 +11,7 @@ namespace LibraryManagement.Librarian
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ddlCategories.Items.Insert(0, new ListItem("Select a category", "-1"));
         }
     }
 }

@@ -2,4 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         PROFILES</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        // this is for looking up profile and seeing any late fees</p>
+    <p>
+        // payment too</p>
 </asp:Content>
