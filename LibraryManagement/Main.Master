@@ -8,7 +8,7 @@
     </asp:ContentPlaceHolder>
     <link href="styles/main.css" rel="stylesheet" />
 </head>
-<body>
+<body class="grey">
     <form id="form1" runat="server">
         <div id="Wrapper">
             <header>
