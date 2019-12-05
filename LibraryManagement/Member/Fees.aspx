@@ -23,7 +23,7 @@
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     </p>
-    <p>
+<p>
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </p>
 </asp:Content>

@@ -31,40 +31,40 @@ namespace LibraryManagement.Member {
         protected global::System.Web.UI.WebControls.Label lblUserName;
         
         /// <summary>
-        /// btnViewProfile control.
+        /// lbtnViewProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewProfile;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnViewProfile;
         
         /// <summary>
-        /// Button1 control.
+        /// lbtnBookHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBookHistory;
         
         /// <summary>
-        /// btnFees control.
+        /// lbtnViewFees control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFees;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnViewFees;
         
         /// <summary>
-        /// btnDeleteAccount control.
+        /// lbtnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteAccount;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnDelete;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

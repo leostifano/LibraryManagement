@@ -9,16 +9,16 @@
         <asp:Label ID="lblUserName" runat="server"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="btnViewProfile" runat="server" Text="View Profile" />
+        <asp:LinkButton ID="lbtnViewProfile" runat="server" PostBackUrl="~/Member/Profile.aspx">View Profile</asp:LinkButton>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="View History" />
+        <asp:LinkButton ID="lbtnBookHistory" runat="server" PostBackUrl="~/Member/BookHistory.aspx">View Book History</asp:LinkButton>
         <br />
         <br />
-        <asp:Button ID="btnFees" runat="server" Text="View Fees" />
+        <asp:LinkButton ID="lbtnViewFees" runat="server" PostBackUrl="~/Member/Fees.aspx">View Fees</asp:LinkButton>
         <br />
         <br />
-        <asp:Button ID="btnDeleteAccount" runat="server" Text="Delete Account" />
+        <asp:LinkButton ID="lbtnDelete" runat="server" OnClick="lbtnDelete_Click">Delete Account</asp:LinkButton>
     </p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
