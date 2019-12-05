@@ -5,12 +5,6 @@ using System.Web;
 
 namespace LibraryManagementSystem
 {
-
-    enum Roles
-    {
-        Member, Librarian, Admin
-    }
-
     abstract class User
     {
         private int _userId;
@@ -37,15 +31,15 @@ namespace LibraryManagementSystem
             set { _lastName = value; }
         }
 
-        private Roles _role;
+        private string _role;
 
-        public Roles Role
+        public string Role
         {
             get { return _role; }
             set { _role = value; }
         }
 
-        public User(int userId, string firstName, string lastName, Roles role)
+        public User(int userId, string firstName, string lastName, string role)
         {
             UserId = userId;
             FirstName = firstName;
