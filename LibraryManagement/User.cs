@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+/**
+ * Author: Leonardo Stifano
+ * 
+ */
+
 namespace LibraryManagementSystem
 {
     abstract class User

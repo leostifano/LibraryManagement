@@ -7,6 +7,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using LibraryManagement.dsLoginTableAdapters;
 
+/**Author: Leonardo Stifano
+* This is the login page which checks if the user has valid login and
+* links the user to a page based on their role
+*/
+
+
 namespace LibraryManagement
 {
     public partial class Login : System.Web.UI.Page
@@ -17,8 +23,11 @@ namespace LibraryManagement
         {
         }
 
-        //Author: Leonaro Stifano
-        //
+        /*
+         * Checks if the user is valid
+         * Uses forms authentication to ensure roles work
+         * 
+         */
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             tblUser = adpUser.GetUserByUsernameAndPassword(txtUsername.Text, txtPassword.Text);

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
     <Content Include="App_Data\LibraryDb.mdf" />
     <Content Include="App_Data\LibraryDb_log.ldf">
       <DependentUpon>LibraryDb.mdf</DependentUpon>
@@ -80,6 +81,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="dsLogin.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -155,7 +163,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Member\" />
   </ItemGroup>
   <ItemGroup>

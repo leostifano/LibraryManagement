@@ -61,13 +61,6 @@
 
                 <tr>
                     <td class="auto-style4 center" colspan="2">
-                        Dont have an account?
-                        <asp:HyperLink ID="hlRegister" runat="server">Register</asp:HyperLink>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="auto-style4 center" colspan="2">
                         <asp:Label ID="lblMsg" runat="server" ForeColor="Red" Text="Username or Password is incorrect" Visible="False"></asp:Label>
                     </td>
                 </tr>
