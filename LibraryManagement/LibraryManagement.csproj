@@ -71,6 +71,7 @@
     <Content Include="App_Data\LibraryDb_log.ldf">
       <DependentUpon>LibraryDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Global.asax" />
     <Content Include="Librarian\WebForm1.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Resources\search.png" />
@@ -80,6 +81,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="dsLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Librarian\LibrarianMaster.master.cs">
       <DependentUpon>LibrarianMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +135,17 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
+    <Content Include="dsLogin.xsc">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Content>
+    <None Include="dsLogin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLogin.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsLogin.xss">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
