@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ManageBooks.aspx" />
     <Content Include="Admin\ManagePublishers.aspx" />
     <Content Include="Admin\ManageGenres.aspx" />
     <Content Include="Admin\ManageAuthors.aspx" />
@@ -103,6 +104,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAdmin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageBooks.aspx.cs">
+      <DependentUpon>ManageBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageBooks.aspx.designer.cs">
+      <DependentUpon>ManageBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManagePublishers.aspx.cs">
       <DependentUpon>ManagePublishers.aspx</DependentUpon>
@@ -202,7 +210,6 @@
     <Content Include="Admin\dsAdmin.xss">
       <DependentUpon>dsAdmin.xsd</DependentUpon>
     </Content>
-    <Content Include="Admin\Web.config" />
     <None Include="dsLogin.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

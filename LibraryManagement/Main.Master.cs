@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/**
+ *  Author: Leonardo Stifano
+ */
+
 namespace LibraryManagement
 {
     public partial class Main : System.Web.UI.MasterPage
