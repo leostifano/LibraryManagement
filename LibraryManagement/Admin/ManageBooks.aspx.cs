@@ -30,6 +30,7 @@ namespace LibraryManagement.Admin
             string publisher = txtPublisher.Text;
             string genre = txtGenre.Text;
             string author = txtAuthor.Text;
+            int reIssue = int.Parse(txtReIssue.Text);
 
             if (title.Trim().Equals(""))
             {
@@ -38,7 +39,7 @@ namespace LibraryManagement.Admin
                 return;
             }
 
-            int result = adpBooks.Insert(title, author, genre, null, null, publisher);
+            int result = adpBooks.Insert(title, author, genre, null, null, publisher, reIssue);
             if (result == 1)
             {
                 lblMessage.Text = "Book added successfully";
@@ -80,6 +81,8 @@ namespace LibraryManagement.Admin
             string genre = txtGenre.Text;
             string author = txtAuthor.Text;
             int bookID = int.Parse(txtBookID.Text);
+            int reIssue = int.Parse(txtReIssue.Text);
+
 
             if (title.Trim().Equals(""))
             {
@@ -88,7 +91,7 @@ namespace LibraryManagement.Admin
                 return;
             }
 
-            int result = adpBooks.Update(title, author, genre, null, null, publisher, bookID);
+            int result = adpBooks.Update(title, author, genre, null, null, publisher, reIssue, bookID);
             if (result == 1)
             {
                 lblMessage.Text = "Book added successfully";

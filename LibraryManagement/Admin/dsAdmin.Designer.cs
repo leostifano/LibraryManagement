@@ -764,6 +764,8 @@ namespace LibraryManagement.Admin {
             
             private global::System.Data.DataColumn columnPublisher;
             
+            private global::System.Data.DataColumn columnReIssueCount;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BooksDataTable() {
@@ -855,6 +857,14 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ReIssueCountColumn {
+                get {
+                    return this.columnReIssueCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -890,7 +900,7 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BooksRow AddBooksRow(string Title, string Author, string Genre, UsersRow parentUsersRowByFK_Books_UserID, System.DateTime DueBy, string Publisher) {
+            public BooksRow AddBooksRow(string Title, string Author, string Genre, UsersRow parentUsersRowByFK_Books_UserID, System.DateTime DueBy, string Publisher, int ReIssueCount) {
                 BooksRow rowBooksRow = ((BooksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -899,7 +909,8 @@ namespace LibraryManagement.Admin {
                         Genre,
                         null,
                         DueBy,
-                        Publisher};
+                        Publisher,
+                        ReIssueCount};
                 if ((parentUsersRowByFK_Books_UserID != null)) {
                     columnValuesArray[4] = parentUsersRowByFK_Books_UserID[0];
                 }
@@ -939,6 +950,7 @@ namespace LibraryManagement.Admin {
                 this.columnRentedBy = base.Columns["RentedBy"];
                 this.columnDueBy = base.Columns["DueBy"];
                 this.columnPublisher = base.Columns["Publisher"];
+                this.columnReIssueCount = base.Columns["ReIssueCount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -958,6 +970,8 @@ namespace LibraryManagement.Admin {
                 base.Columns.Add(this.columnDueBy);
                 this.columnPublisher = new global::System.Data.DataColumn("Publisher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPublisher);
+                this.columnReIssueCount = new global::System.Data.DataColumn("ReIssueCount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReIssueCount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBookId}, true));
                 this.columnBookId.AutoIncrement = true;
@@ -2057,6 +2071,22 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ReIssueCount {
+                get {
+                    try {
+                        return ((int)(this[this.tableBooks.ReIssueCountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ReIssueCount\' in table \'Books\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBooks.ReIssueCountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsersRow UsersRow {
                 get {
                     return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Books_UserID"])));
@@ -2124,6 +2154,18 @@ namespace LibraryManagement.Admin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPublisherNull() {
                 this[this.tableBooks.PublisherColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsReIssueCountNull() {
+                return this.IsNull(this.tableBooks.ReIssueCountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetReIssueCountNull() {
+                this[this.tableBooks.ReIssueCountColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2977,6 +3019,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             tableMapping.ColumnMappings.Add("RentedBy", "RentedBy");
             tableMapping.ColumnMappings.Add("DueBy", "DueBy");
             tableMapping.ColumnMappings.Add("Publisher", "Publisher");
+            tableMapping.ColumnMappings.Add("ReIssueCount", "ReIssueCount");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2986,7 +3029,8 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Books] ([Title], [Author], [Genre], [RentedBy], [DueBy], [Publ" +
-                "isher]) VALUES (@Title, @Author, @Genre, @RentedBy, @DueBy, @Publisher)";
+                "isher], [ReIssueCount]) VALUES (@Title, @Author, @Genre, @RentedBy, @DueBy, @Pub" +
+                "lisher, @ReIssueCount)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Author", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Author", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2994,11 +3038,12 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RentedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RentedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DueBy", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DueBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Publisher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Publisher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReIssueCount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReIssueCount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Books] SET [Title] = @Title, [Author] = @Author, [Genre] = @Genre, " +
-                "[RentedBy] = @RentedBy, [DueBy] = @DueBy, [Publisher] = @Publisher WHERE (([Book" +
-                "Id] = @Original_BookId))";
+                "[RentedBy] = @RentedBy, [DueBy] = @DueBy, [Publisher] = @Publisher, [ReIssueCoun" +
+                "t] = @ReIssueCount WHERE (([BookId] = @Original_BookId))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Author", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Author", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3006,6 +3051,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RentedBy", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RentedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DueBy", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DueBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Publisher", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Publisher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReIssueCount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReIssueCount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BookId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -3022,7 +3068,8 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT BookId, Title, Author, Genre, RentedBy, DueBy, Publisher FROM dbo.Books";
+            this._commandCollection[0].CommandText = "SELECT BookId, Title, Author, Genre, RentedBy, DueBy, Publisher, ReIssueCount FRO" +
+                "M dbo.Books";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -3144,7 +3191,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Title, string Author, string Genre, global::System.Nullable<int> RentedBy, global::System.Nullable<global::System.DateTime> DueBy, string Publisher) {
+        public virtual int Insert(string Title, string Author, string Genre, global::System.Nullable<int> RentedBy, global::System.Nullable<global::System.DateTime> DueBy, string Publisher, global::System.Nullable<int> ReIssueCount) {
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
@@ -3181,6 +3228,12 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Publisher));
             }
+            if ((ReIssueCount.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ReIssueCount.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3201,7 +3254,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Title, string Author, string Genre, global::System.Nullable<int> RentedBy, global::System.Nullable<global::System.DateTime> DueBy, string Publisher, int Original_BookId) {
+        public virtual int Update(string Title, string Author, string Genre, global::System.Nullable<int> RentedBy, global::System.Nullable<global::System.DateTime> DueBy, string Publisher, global::System.Nullable<int> ReIssueCount, int Original_BookId) {
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
@@ -3238,7 +3291,13 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Publisher));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_BookId));
+            if ((ReIssueCount.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ReIssueCount.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_BookId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

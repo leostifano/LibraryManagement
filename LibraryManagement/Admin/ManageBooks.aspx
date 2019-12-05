@@ -21,6 +21,10 @@
         <asp:TextBox ID="txtPublisher" runat="server"></asp:TextBox>
     </p>
     <p style="margin-left: 40px">
+        Re-Issue Count:
+        <asp:TextBox ID="txtReIssue" runat="server"></asp:TextBox>
+    </p>
+    <p style="margin-left: 40px">
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </p>
     <p>
