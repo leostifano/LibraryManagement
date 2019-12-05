@@ -182,31 +182,6 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
-<<<<<<< HEAD
-    <Content Include="Member\MemberMaster.master" />
-    <Content Include="Member\LibraryDBDataSet.xsc">
-      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="Member\LibraryDBDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LibraryDBDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Member\LibraryDBDataSet.xss">
-      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
-=======
-    <Content Include="dsLogin.xsc">
-      <DependentUpon>dsLogin.xsd</DependentUpon>
-    </Content>
-    <None Include="dsLogin.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsLogin.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="dsLogin.xss">
-      <DependentUpon>dsLogin.xsd</DependentUpon>
->>>>>>> c7bd842dda918d2dbd8972bd3f5fbc1dfa6771a5
-    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
