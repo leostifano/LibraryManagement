@@ -53,7 +53,7 @@ header {
 
 aside {
     width: 199px;
-    height: 400px;
+    height: 600px;
     border: 1px solid black;
     background-color: rgb(255, 183, 133);
     float: left;
@@ -62,7 +62,7 @@ aside {
 
 #ContentArea {
     width: 708px;
-    height: 400px;
+    height: 600px;
     padding: 10px;
     float: right;
     border-bottom: 1px solid black;

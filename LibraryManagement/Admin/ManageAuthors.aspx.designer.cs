@@ -7,45 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryManagement.Member {
-    
-    
-    public partial class Home {
-        
+namespace LibraryManagement.Admin
+{
+
+
+    public partial class ManageAuthors
+    {
+
         /// <summary>
-        /// lblBooksGrid control.
+        /// lstAuthors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBooksGrid;
-        
+        protected global::System.Web.UI.WebControls.ListBox lstAuthors;
+
         /// <summary>
-        /// grdBooks control.
+        /// txtNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdBooks;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtNew;
+
         /// <summary>
-        /// lblRequestsGrid control.
+        /// btnChange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRequestsGrid;
-        
+        protected global::System.Web.UI.WebControls.Button btnChange;
+
         /// <summary>
-        /// grdRequests control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdRequests;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

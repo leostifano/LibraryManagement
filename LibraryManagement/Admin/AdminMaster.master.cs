@@ -5,18 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace LibraryManagement.Member
+namespace LibraryManagement.Admin
 {
-    public partial class Profile : System.Web.UI.Page
+    public partial class AdminMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

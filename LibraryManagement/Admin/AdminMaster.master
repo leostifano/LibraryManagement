@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="LibraryManagement.Admin.AdminMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderAside" runat="server">
+    <p>
+    <asp:Button ID="btnManageUser" runat="server" Text="Manage Users" Width="182px" Height="30px" PostBackUrl="~/Admin/ManageUsers.aspx" />
+</p>
+    <p>
+    <asp:Button ID="btnManageBook" runat="server" Text="Manage Books" Width="182px" Height="30px" PostBackUrl="~/Admin/ManageBooks.aspx" />
+    <br />
+</p>
+    <p>
+    <asp:Button ID="btnManageAuth" runat="server" Text="Manage Authors" Width="182px" Height="30px" PostBackUrl="~/Admin/ManageAuthors.aspx" />
+</p>
+    <p>
+    <asp:Button ID="btnManagePub" runat="server" Text="Manage Publishers" Width="182px" Height="30px" PostBackUrl="~/Admin/ManagePublishers.aspx" />
+</p>
+    <p>
+    <asp:Button ID="btnManageGenre" runat="server" Text="Manage Genres" Width="182px" Height="30px" PostBackUrl="~/Admin/ManageGenres.aspx" />
+</p>
+    <p>
+        &nbsp;</p>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
