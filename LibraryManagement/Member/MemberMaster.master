@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="MemberMaster.master.cs" Inherits="LibraryManagement.Member.MemberMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../styles/member.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderAside" runat="server">
+    <p id="side_nav">
+        <asp:Image ID="Image1" runat="server" Height="80px" Width="146px" />
+        <br />
+        <asp:Label ID="lblUserName" runat="server"></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="btnViewProfile" runat="server" Text="View Profile" />
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="View History" />
+        <br />
+        <br />
+        <asp:Button ID="btnFees" runat="server" Text="View Fees" />
+        <br />
+        <br />
+        <asp:Button ID="btnDeleteAccount" runat="server" Text="Delete Account" />
+    </p>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
