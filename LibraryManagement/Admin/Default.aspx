@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderAside" runat="server">
     <p>
-    <asp:Button ID="btnAddOrModifyUsers" runat="server" Text="Add / Modify Users" Width="182px" Height="30px" />
+    <asp:Button ID="btnManageUsers" runat="server" Text="Manage Users" Width="182px" Height="30px" />
     <br />
 </p>
     <p>
