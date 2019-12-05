@@ -13,7 +13,7 @@
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     </p>
     <p>
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
 &nbsp;<asp:Button ID="btnCancel" runat="server" Text="Cancel" />
     </p>
 </asp:Content>

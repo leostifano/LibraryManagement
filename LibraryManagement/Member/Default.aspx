@@ -4,7 +4,7 @@
         <asp:Label ID="lblBooksGrid" runat="server" Text="My Issued Books:"></asp:Label>
     </p>
     <p>
-        <asp:GridView ID="grdIssuedBooks" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="grdBooks" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

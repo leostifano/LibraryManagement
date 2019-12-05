@@ -4,8 +4,7 @@
         Overdue fees:
         <asp:Label ID="lblOverdueFees" runat="server"></asp:Label>
 &nbsp;
-        <asp:Button ID="btnPayNow" runat="server" Text="Pay Now" />
-    </p>
+        </p>
     <p>
         Fee History:</p>
     <p>

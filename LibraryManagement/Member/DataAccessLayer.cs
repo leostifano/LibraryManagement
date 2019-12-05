@@ -14,7 +14,7 @@ namespace LibraryManagement.Member
         private LibraryDBDataSetTableAdapters.RequestsTableAdapter adpRequests;
         private LibraryDBDataSet.RequestsDataTable tblRequests;
         private List<BusinessLogicLayer> lstRequests;
-
+        
         public DataAccessLayer()
         {
             adpBooks = new LibraryDBDataSetTableAdapters.BooksTableAdapter();
@@ -30,11 +30,11 @@ namespace LibraryManagement.Member
         {
             tblBooks = adpBooks.GetBooksByRenterId(renterId);
 
-            if (tblBooks.Count > 0)
+            if(tblBooks.Count > 0)
             {
                 lstBooks = new List<BusinessLogicLayer>();
 
-                foreach (var row in tblBooks)
+                foreach(var row in tblBooks)
                 {
                     BusinessLogicLayer book = new BusinessLogicLayer();
 
@@ -72,5 +72,4 @@ namespace LibraryManagement.Member
             return lstRequests;
         }
     }
-}
 }

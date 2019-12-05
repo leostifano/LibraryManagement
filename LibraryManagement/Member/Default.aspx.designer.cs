@@ -22,13 +22,13 @@ namespace LibraryManagement.Member {
         protected global::System.Web.UI.WebControls.Label lblBooksGrid;
         
         /// <summary>
-        /// grdIssuedBooks control.
+        /// grdBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdIssuedBooks;
+        protected global::System.Web.UI.WebControls.GridView grdBooks;
         
         /// <summary>
         /// lblRequestsGrid control.

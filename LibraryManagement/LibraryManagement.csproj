@@ -67,6 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LibraryDb.mdf" />
+    <Content Include="App_Data\LibraryDb_log.ldf">
+      <DependentUpon>LibraryDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
     <Content Include="Librarian\WebForm1.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Member\BookHistory.aspx" />
@@ -81,6 +86,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="dsLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Librarian\LibrarianMaster.master.cs">
       <DependentUpon>LibrarianMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,15 +124,14 @@
     </Compile>
     <Compile Include="Member\BookHistory.aspx.cs">
       <DependentUpon>BookHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\BookHistory.aspx.designer.cs">
       <DependentUpon>BookHistory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Member\BusinessLogicLayer.cs" />
     <Compile Include="Member\DataAccessLayer.cs" />
     <Compile Include="Member\Fees.aspx.cs">
       <DependentUpon>Fees.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\Fees.aspx.designer.cs">
       <DependentUpon>Fees.aspx</DependentUpon>
@@ -131,9 +143,13 @@
     <Compile Include="Member\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Member\LibraryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Member\MemberMaster.master.cs">
       <DependentUpon>MemberMaster.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\MemberMaster.master.designer.cs">
       <DependentUpon>MemberMaster.master</DependentUpon>
@@ -163,7 +179,6 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
-    <Content Include="Member\MemberMaster.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -174,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
