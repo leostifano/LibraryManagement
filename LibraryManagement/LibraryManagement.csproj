@@ -71,7 +71,6 @@
     <Content Include="App_Data\LibraryDb_log.ldf">
       <DependentUpon>LibraryDb.mdf</DependentUpon>
     </Content>
-    <Content Include="Global.asax" />
     <Content Include="Librarian\WebForm1.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Member\BookHistory.aspx" />
@@ -122,44 +121,12 @@
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
-    <Compile Include="Member\BookHistory.aspx.cs">
-      <DependentUpon>BookHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member\BookHistory.aspx.designer.cs">
-      <DependentUpon>BookHistory.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Member\BusinessLogicLayer.cs" />
     <Compile Include="Member\DataAccessLayer.cs" />
-    <Compile Include="Member\Fees.aspx.cs">
-      <DependentUpon>Fees.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member\Fees.aspx.designer.cs">
-      <DependentUpon>Fees.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Member\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Member\LibraryDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Member\MemberMaster.master.cs">
-      <DependentUpon>MemberMaster.master</DependentUpon>
-    </Compile>
-    <Compile Include="Member\MemberMaster.master.designer.cs">
-      <DependentUpon>MemberMaster.master</DependentUpon>
-    </Compile>
-    <Compile Include="Member\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Member\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -179,6 +146,18 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
+    <Content Include="Member\MemberMaster.master" />
+    <Content Include="Member\LibraryDBDataSet.xsc">
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Member\LibraryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibraryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Member\LibraryDBDataSet.xss">
+      <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
