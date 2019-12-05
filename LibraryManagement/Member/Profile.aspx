@@ -6,11 +6,11 @@
     </p>
     <p>
         Username:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
     </p>
     <p>
         Password:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />

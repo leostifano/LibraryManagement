@@ -4,11 +4,6 @@
         Book History:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     <p>
-        Sort By:
-        <asp:DropDownList ID="ddlSortBy" runat="server" AutoPostBack="True">
-        </asp:DropDownList>
-    </p>
-    <p>
         <asp:GridView ID="grdBookHistory" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#7C6F57" />
@@ -22,5 +17,8 @@
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
+    </p>
+    <p>
+        <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </p>
 </asp:Content>

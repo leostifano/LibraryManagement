@@ -18,7 +18,7 @@ namespace LibraryManagement.Member
 
         private void RefreshGridView()
         {
-            int userId = 1;
+            int userId = (int)Session["UserId"];
             List<BusinessLogicLayer> lstBooks = bll.GetBooksByRenterId(userId);
             List<BusinessLogicLayer> lstRequests = bll.GetRequestsById(userId);
 

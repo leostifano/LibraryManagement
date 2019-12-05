@@ -4,6 +4,7 @@
         Overdue fees:
         <asp:Label ID="lblOverdueFees" runat="server"></asp:Label>
 &nbsp;
+        <asp:Button ID="btnPayNow" runat="server" OnClick="btnPayNow_Click" Text="Pay Now" />
         </p>
     <p>
         Fee History:</p>
@@ -21,5 +22,8 @@
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
+    </p>
+    <p>
+        <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </p>
 </asp:Content>

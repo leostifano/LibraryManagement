@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 namespace LibraryManagement.Member
-{
+{   // Author: Elizabeth Smikle
     public class BusinessLogicLayer
     {
         private DataAccessLayer dal;
@@ -22,6 +22,9 @@ namespace LibraryManagement.Member
         public string Publisher { get; set; }
         public string RequestType { get; set; }
         public string RequestStatus { get; set; }
+        public string Username { get; set; }
+        public decimal Fees { get; set; }
+        public string Password { get; set; }
 
         public List<BusinessLogicLayer> GetBooksByRenterId(int renterId)
         {
@@ -31,6 +34,31 @@ namespace LibraryManagement.Member
         public List<BusinessLogicLayer> GetRequestsById(int userId)
         {
             return dal.GetRequestsById(userId);
+        }
+
+        public List<BusinessLogicLayer> GetUserById(int userId)
+        {
+            return dal.GetUserById(userId);
+        }
+
+        public bool InsertRequest(BusinessLogicLayer request, int userId)
+        {
+            return dal.InsertRequest(request, userId);
+        }
+
+        public List<BusinessLogicLayer> GetBookHistory(int userId)
+        {
+            return dal.GetBookHistory(userId);
+        }
+
+        public List<BusinessLogicLayer> GetUserInfo(int userId)
+        {
+            return dal.GetUserInfo(userId);
+        }
+
+        public bool UpdateUser(BusinessLogicLayer user, int userId)
+        {
+            return dal.UpdateUser(user, userId);
         }
 
     }
