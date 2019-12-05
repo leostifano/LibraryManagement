@@ -36,6 +36,9 @@
         <asp:Button ID="btnIssue" runat="server" Text="Issue" />
     </p>
     <p>
+        <asp:Label runat="server" Text="lblMessage"></asp:Label>
+    </p>
+    <p>
         &nbsp;</p>
     <p>
         &nbsp;</p>

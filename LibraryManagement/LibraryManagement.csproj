@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LibraryDb.mdf" />
+    <Content Include="App_Data\LibraryDb_log.ldf">
+      <DependentUpon>LibraryDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Librarian\BookReturn.aspx" />
     <Content Include="Librarian\Default.aspx" />
     <Content Include="Librarian\IssueBook.aspx" />
@@ -81,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="Librarian\bllLibrarian.cs" />
     <Compile Include="Librarian\BookReturn.aspx.cs">
       <DependentUpon>BookReturn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -94,6 +99,12 @@
     </Compile>
     <Compile Include="Librarian\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\dalLibrarian.cs" />
+    <Compile Include="Librarian\dsLibrarian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLibrarian.xsd</DependentUpon>
     </Compile>
     <Compile Include="Librarian\IssueBook.aspx.cs">
       <DependentUpon>IssueBook.aspx</DependentUpon>
@@ -163,6 +174,17 @@
     <Content Include="Main.Master" />
     <Content Include="Librarian\LibrarianMaster.master" />
     <Content Include="Librarian\Web.config" />
+    <Content Include="Librarian\dsLibrarian.xsc">
+      <DependentUpon>dsLibrarian.xsd</DependentUpon>
+    </Content>
+    <None Include="Librarian\dsLibrarian.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLibrarian.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Librarian\dsLibrarian.xss">
+      <DependentUpon>dsLibrarian.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

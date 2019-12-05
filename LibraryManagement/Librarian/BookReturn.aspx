@@ -3,10 +3,10 @@
     <p>
         BOOK RETURN</p>
     <p>
-        Username:
+        Id:
         <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnLoad" runat="server" Text="load" />
+        <asp:Button ID="btnLoad" runat="server" Text="load" OnClick="btnLoad_Click" />
 &nbsp;&nbsp;&nbsp; // enter username, load taken out books to grd, populate ddl with book names, return updates Rented column</p>
     <p>
         &nbsp;</p>
@@ -24,12 +24,12 @@
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
     <br />
-    <br />
-    <asp:DropDownList ID="ddlBooksIssuedToUser" runat="server">
-    </asp:DropDownList>
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 &nbsp;
     <br />
     <br />
+    <asp:Button ID="btnReturn" runat="server" Text="Return" OnClick="btnReturn_Click" />
     <br />
-    <asp:Button ID="btnReturn" runat="server" Text="Return" />
+    <br />
+    <asp:Label runat="server" ID="lblMessage"></asp:Label>
 </asp:Content>
