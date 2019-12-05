@@ -28,7 +28,7 @@
     <asp:Button ID="btnLogout" runat="server" Style="margin-left: 194px" Text="Logout" />
             </header>
             <aside>
-                <h3>Navigation</h3>
+                <h3>Controls</h3>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderAside" runat="server">
                 </asp:ContentPlaceHolder>
             </aside>

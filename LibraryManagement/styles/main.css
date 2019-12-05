@@ -1,18 +1,22 @@
 ﻿#login {
     width: 400px;
-    border: 2px solid navy;
     border-radius: 20px; /*not shown in editor, but still works*/
     margin: 0 auto;
     margin-top: 10%;
     /*text-align: center;*/
     padding: 20px;
-    color: rgb(116, 118, 131);
-    background-color: rgb(0, 26, 60);
-}
+    background-color: rgba(132, 173, 229, 0.5);
+    }
 
 #login table{
     width: 350px;
     margin: 0 auto;
+}
+
+
+#login th{
+    font-size: 1.25em;
+    padding: 10px;
 }
 
 #login input[type="text"]{
@@ -28,6 +32,7 @@ aside h3{
     margin: 0 auto;
     font-family: Verdana, Calibri, Arial, sans-serif;
     border: 1px solid black;
+    border-collapse:collapse;
 }
 
 /*
@@ -42,26 +47,26 @@ aside h3{
 header {
     height: 75px;
     text-align: center;
-    border-bottom: 1px solid black;
-    background-color: lightgreen;
+    background-color: lightblue;
     padding: 10px;
 }
 
 aside {
-    width: 200px;
+    width: 199px;
     height: 400px;
-    border-right: 1px solid black;
-    background-color: lightblue;
+    border: 1px solid black;
+    background-color: rgb(255, 183, 133);
     float: left;
     padding: 10px;
 }
 
 #ContentArea {
-    width: 709px;
+    width: 708px;
     height: 400px;
     padding: 10px;
-    background-color: lightpink;
     float: right;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #btnAccountLogout {
@@ -75,12 +80,14 @@ aside {
     margin: 5px 0px 0px 26px;
 }
 
-
-
 .searchBar {
     padding-top: 2px;
 }
 
-body{
+.grey{
     background-color: grey;
+}
+
+.center{
+    text-align:center;
 }
