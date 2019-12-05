@@ -12,7 +12,7 @@ namespace LibraryManagement.Member
         BusinessLogicLayer bll = new BusinessLogicLayer();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblUserName.Text = (string)Session["UserId"];
+            lblUserName.Text = (string)Session["Username"];
         }
 
         protected void btnViewProfile_Click(object sender, EventArgs e)
@@ -22,7 +22,7 @@ namespace LibraryManagement.Member
 
         protected void lbtnDelete_Click(object sender, EventArgs e)
         {
-            int userId = (int)Session["UserId"];
+            int userId = 1;
             BusinessLogicLayer request = new BusinessLogicLayer();
             request.RequestType = "Delete";
             request.Id = 0;

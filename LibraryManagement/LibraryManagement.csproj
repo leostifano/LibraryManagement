@@ -193,6 +193,7 @@
     <Content Include="Member\LibraryDBDataSet.xss">
       <DependentUpon>LibraryDBDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Member\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

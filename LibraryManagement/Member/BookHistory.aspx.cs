@@ -15,7 +15,7 @@ namespace LibraryManagement.Member
         public BookHistory()
         {
             bll = new BusinessLogicLayer();
-            userId = (int)Session["UserId"];
+            userId = 1;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
