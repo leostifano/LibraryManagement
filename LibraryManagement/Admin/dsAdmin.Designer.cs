@@ -434,6 +434,8 @@ namespace LibraryManagement.Admin {
             
             private global::System.Data.DataColumn columnRole;
             
+            private global::System.Data.DataColumn columnmaxBooksIssued;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsersDataTable() {
@@ -501,6 +503,14 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn maxBooksIssuedColumn {
+                get {
+                    return this.columnmaxBooksIssued;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -536,13 +546,14 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow AddUsersRow(string Username, string Password, string Role) {
+            public UsersRow AddUsersRow(string Username, string Password, string Role, int maxBooksIssued) {
                 UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Username,
                         Password,
-                        Role};
+                        Role,
+                        maxBooksIssued};
                 rowUsersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsersRow);
                 return rowUsersRow;
@@ -576,6 +587,7 @@ namespace LibraryManagement.Admin {
                 this.columnUsername = base.Columns["Username"];
                 this.columnPassword = base.Columns["Password"];
                 this.columnRole = base.Columns["Role"];
+                this.columnmaxBooksIssued = base.Columns["maxBooksIssued"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -589,6 +601,8 @@ namespace LibraryManagement.Admin {
                 base.Columns.Add(this.columnPassword);
                 this.columnRole = new global::System.Data.DataColumn("Role", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRole);
+                this.columnmaxBooksIssued = new global::System.Data.DataColumn("maxBooksIssued", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmaxBooksIssued);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserId}, true));
                 this.columnUserId.AutoIncrement = true;
@@ -1887,6 +1901,34 @@ namespace LibraryManagement.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int maxBooksIssued {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsers.maxBooksIssuedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'maxBooksIssued\' in table \'Users\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsers.maxBooksIssuedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsmaxBooksIssuedNull() {
+                return this.IsNull(this.tableUsers.maxBooksIssuedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetmaxBooksIssuedNull() {
+                this[this.tableUsers.maxBooksIssuedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BooksRow[] GetBooksRows() {
                 if ((this.Table.ChildRelations["FK_Books_UserID"] == null)) {
                     return new BooksRow[0];
@@ -2513,6 +2555,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             tableMapping.ColumnMappings.Add("Username", "Username");
             tableMapping.ColumnMappings.Add("Password", "Password");
             tableMapping.ColumnMappings.Add("Role", "Role");
+            tableMapping.ColumnMappings.Add("maxBooksIssued", "maxBooksIssued");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2521,20 +2564,23 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([Username], [Password], [Role]) VALUES (@Username, @Pa" +
-                "ssword, @Role)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([Username], [Password], [Role], [maxBooksIssued]) VALU" +
+                "ES (@Username, @Password, @Role, @maxBooksIssued)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maxBooksIssued", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "maxBooksIssued", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Users] SET [Username] = @Username, [Password] = @Password, [Role] =" +
-                " @Role WHERE (([UserId] = @Original_UserId))";
+                " @Role, [maxBooksIssued] = @maxBooksIssued WHERE (([UserId] = @Original_UserId))" +
+                "";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maxBooksIssued", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "maxBooksIssued", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -2551,11 +2597,12 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UserId, Username, Password, Role FROM dbo.Users";
+            this._commandCollection[0].CommandText = "SELECT UserId, Username, Password, Role, maxBooksIssued FROM dbo.Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Username FROM dbo.Users where role = @role";
+            this._commandCollection[1].CommandText = "SELECT Password, Role, UserId, Username, maxBooksIssued FROM Users WHERE (Role = " +
+                "@role)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@role", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -2680,7 +2727,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Username, string Password, string Role) {
+        public virtual int Insert(string Username, string Password, string Role, global::System.Nullable<int> maxBooksIssued) {
             if ((Username == null)) {
                 throw new global::System.ArgumentNullException("Username");
             }
@@ -2698,6 +2745,12 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Role));
+            }
+            if ((maxBooksIssued.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(maxBooksIssued.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2719,7 +2772,7 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Username, string Password, string Role, int Original_UserId) {
+        public virtual int Update(string Username, string Password, string Role, global::System.Nullable<int> maxBooksIssued, int Original_UserId) {
             if ((Username == null)) {
                 throw new global::System.ArgumentNullException("Username");
             }
@@ -2738,7 +2791,13 @@ namespace LibraryManagement.Admin.dsAdminTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Role));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_UserId));
+            if ((maxBooksIssued.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(maxBooksIssued.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_UserId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

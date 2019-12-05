@@ -3,7 +3,7 @@
     <p style="margin-left: 40px">
     UserID:
     <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox>
-&nbsp;</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
 <p style="margin-left: 40px">
     Username:
     <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
@@ -19,6 +19,10 @@
         <asp:ListItem>Librarian</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
     </asp:DropDownList>
+</p>
+    <p style="margin-left: 40px">
+        Max Books Issued:
+        <asp:TextBox ID="txtMaxBooksIssued" runat="server"></asp:TextBox>
 </p>
 <p style="margin-left: 40px">
     <asp:Label ID="lblMessage" runat="server"></asp:Label>

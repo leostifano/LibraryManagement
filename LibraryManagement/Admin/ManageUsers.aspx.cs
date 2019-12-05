@@ -60,6 +60,7 @@ namespace LibraryManagement.Admin
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+            int maxIssued = int.Parse(txtMaxBooksIssued.Text);
 
             if(username.Trim().Equals("") || password.Trim().Equals(""))
             {
@@ -68,7 +69,7 @@ namespace LibraryManagement.Admin
                 return;
             }
 
-            int result = adpUsers.Insert(username, password, ddlRole.Text);
+            int result = adpUsers.Insert(username, password, ddlRole.Text, maxIssued);
             if(result == 1)
             {
                 lblMessage.Text = "User added successfully";
@@ -88,6 +89,7 @@ namespace LibraryManagement.Admin
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             int userID = int.Parse(txtUserID.Text);
+            int maxIssued = int.Parse(txtMaxBooksIssued.Text);
             string role = ddlRole.Text;
 
             if (username.Trim().Equals("") || password.Trim().Equals(""))
@@ -97,7 +99,7 @@ namespace LibraryManagement.Admin
                 return;
             }
 
-            int result = adpUsers.Update(username, password, role, userID); ;
+            int result = adpUsers.Update(username, password, role, maxIssued, userID);
             if (result == 1)
             {
                 lblMessage.Text = "User updated successfully";
