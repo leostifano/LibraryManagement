@@ -124,7 +124,6 @@
     </Compile>
     <Compile Include="Member\BookHistory.aspx.cs">
       <DependentUpon>BookHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\BookHistory.aspx.designer.cs">
       <DependentUpon>BookHistory.aspx</DependentUpon>
@@ -133,7 +132,6 @@
     <Compile Include="Member\DataAccessLayer.cs" />
     <Compile Include="Member\Fees.aspx.cs">
       <DependentUpon>Fees.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\Fees.aspx.designer.cs">
       <DependentUpon>Fees.aspx</DependentUpon>
@@ -152,7 +150,6 @@
     </Compile>
     <Compile Include="Member\MemberMaster.master.cs">
       <DependentUpon>MemberMaster.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\MemberMaster.master.designer.cs">
       <DependentUpon>MemberMaster.master</DependentUpon>
