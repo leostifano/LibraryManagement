@@ -71,7 +71,7 @@ namespace LibraryManagement
                 returnUrl = "~/";
             }
 
-            Session["Username"] = txtUsername.Text;
+            Session["UserId"] = row.UserId;
             Session["Role"] = row.role;
 
             Response.Redirect(returnUrl);
